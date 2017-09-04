@@ -104,6 +104,5 @@ public class Main {
 //        }
 
         System.out.println(res);
-        int a=Inteface_test.a;
 	}
 }

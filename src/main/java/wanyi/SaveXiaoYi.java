@@ -37,21 +37,21 @@ public class SaveXiaoYi {
             String[] xStrings = secondLine.split(" ");
             String[] yStrings = thirdLine.split(" ");
 
-            int[] x = new int[xStrings.length];
-            int[] y = new int[yStrings.length];
+            int[] x = new int[trapNum];
+            int[] y = new int[trapNum];
 
-            for(int i=0;i<x.length;i++){
+            for(int i=0;i<trapNum;i++){
                 x[i]=Integer.parseInt(xStrings[i]);
                 y[i]=Integer.parseInt(yStrings[i]);
             }
 
-            int[] array = new int[x.length];//落入陷阱i所需最少时间
-            for(int i=0;i<array.length;i++){
+            int[] array = new int[trapNum];//落入陷阱i所需最少时间
+            for(int i=0;i<trapNum;i++){
                 array[i] = x[i]+y[i]-2;
             }
 
             int min = array[0];
-            for(int i=1;i<array.length;i++){
+            for(int i=1;i<trapNum;i++){
                 if(array[i]<min){
                     min=array[i];
                 }
